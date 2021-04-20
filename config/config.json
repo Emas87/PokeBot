@@ -1,0 +1,18 @@
+{
+	"key_binding" : {
+		"up" : ["w", "s"],
+		"down" : ["s", "w"],
+		"left" : ["a", "d"],
+		"right" : ["d", "a"],
+		"a" : ["x","x"],
+		"b" : ["z","z"]
+	},
+	"img_categories" : {
+		"button" : {
+			"Actions" : ["fight.png", "surf.png", "out.png"]
+		},
+		"message" : {
+			"Messages" : ["no_pp.png"]			
+		}
+	}
+}
