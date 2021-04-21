@@ -36,6 +36,9 @@ class Bot:
         # Processes
         self.control_process = None
 
+        # variables
+        self.enter_exit_waiting_time = 1.1
+
     def get_boxes(self, key, image=None, color=False, threshold=0.85):
         # Will get all matches for the images inside the dict with key 'key'
         # screen_shot = self.screen_reader.background_screenshot()
@@ -81,7 +84,10 @@ class Bot:
         self.control_process.terminate()
 
     def go_to_cave(self):
-        cmd_list = [('left', 2), ('down', 6), ('down', 15), ('right', 4), ('down', 9), ('left', 1), ('down', 8),
+        cmd_list = [('left', 2), ('down', 5)]
+        self.move_to(cmd_list)
+        time.sleep(self.enter_exit_waiting_time)
+        cmd_list = [('down', 15), ('right', 4), ('down', 9), ('left', 1), ('down', 8),
                     ('right', 7), ('down', 10), ('left', 3), ('up', 3)]
         self.move_to(cmd_list)
         self.logger.info("Arrived to cave")
@@ -93,9 +99,13 @@ class Bot:
         self.move_to(cmd_list)
         time.sleep(1)
         self.move_to(cmd_list)
+        time.sleep(1)
         self.move_to(cmd_list)
+        time.sleep(1)
         self.move_to(cmd_list)
+        time.sleep(1)
         self.move_to(cmd_list)
+        time.sleep(1)
         self.move_to([('down', 1)])
         self.move_to(cmd_list)
         self.logger.info("Healed Pokemon")
@@ -144,8 +154,11 @@ class Bot:
         return False, []
 
     def go_to_pokecenter(self):
+        cmd_list = [('down', 1)]
+        self.move_to(cmd_list)
+        time.sleep(self.enter_exit_waiting_time)
         cmd_list = [('down', 1), ('left', 2), ('down', 7), ('down', 15), ('right', 4), ('down', 9), ('left', 1), ('down', 8),
-                    ('right', 7), ('down', 10), ('left', 3), ('up', 3)]
+                    ('right', 7), ('down', 10), ('left', 3)]
         self.move_to(cmd_list, back=True)
         self.logger.info("Arrived to pokecenter")
 
