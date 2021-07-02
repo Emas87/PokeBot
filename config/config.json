@@ -5,14 +5,19 @@
 		"left" : ["a", "d"],
 		"right" : ["d", "a"],
 		"a" : ["x","x"],
-		"b" : ["z","z"]
+		"b" : ["z","z"],
+		"1" : ["LSHIFT","LSHIFT"],
+		"6" : ["6","6"],
+		"9" : ["9","9"]
 	},
 	"img_categories" : {
 		"button" : {
-			"Actions" : ["fight.png", "surf.png", "out.png"]
+			"Actions" : ["fight.png", "fight2.png", "surf.png", "out.png", "out1.png", "no_pp.png", "no_pp2.png", "horde.png", 
+			"horde1.png", "run.png", "run2.png", "skip_move.png", "out_route16.png", "out_route119.png","out_route162.png", 
+			"out_route1192.png"]
 		},
 		"message" : {
-			"Messages" : ["no_pp.png"]			
+			"Messages" : ["healed.png"]			
 		}
 	}
 }

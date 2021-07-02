@@ -6,7 +6,7 @@ import time
 class MouseController:
     def __init__(self):
         self.logger = logging.getLogger(__name__)
-        self.click_delay = 0.5
+        self.click_delay = 0.6
         mouse.on_click(self.report_position, args=())
 
     def report_position(self):
